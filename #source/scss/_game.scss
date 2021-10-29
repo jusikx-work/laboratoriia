@@ -1,0 +1,172 @@
+.game-body{
+    background: #E7EEF3;
+}
+
+
+
+.quiz-container {
+    margin: 0 auto;
+    max-width: 700px;
+    min-height: 497px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 25px 25px 25px 25px; 
+    border: 2.2px solid #009687b6;
+    @media (max-width: 768px) {
+        margin: 0px 15px 0 15px;
+    }
+    
+}
+
+
+.question-number h3 {
+    color: darkcyan;
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding-bottom:  10px;
+}
+
+#question {
+    font-size: 24px;
+    color: #000000;
+    padding: 15px 0;
+    margin-bottom: 10px;
+}
+
+.options {
+    margin-bottom: 15px;
+}
+
+.options div {
+    background-color: #cccccc;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.options div:hover {
+    background-color: #ccccccaf;
+}
+
+.options div.correct {
+    color: #ffffff;
+    background-color: green;
+}
+
+.options div.wrong {
+    color: #ffffff;
+    background-color: red;
+}
+
+.options div.disabled {
+    pointer-events: none;
+}
+
+.button #btn-next{
+    padding: 10px 50px;
+    background-color: darkcyan;
+    font-size: 18px;
+    color: #ffffff;
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    margin-bottom: 15px;
+}
+
+.button #btn-next:hover{
+    background-color: #009687b6;
+}
+
+#answers-tracker {
+    border-top: 1px solid #cccccc;
+    padding-top: 15px;
+}
+
+#answers-tracker div{
+    height:  40px;
+    width: 40px;
+    background-color: #cccccc;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#answers-tracker div.correct {
+    background-color: green;
+}
+
+#answers-tracker div.wrong {
+    background-color: red;
+}
+
+.quiz-over-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.quiz-over-modal.active {
+    display: flex;
+}
+
+.quiz-over-modal .content {
+    background-color: darkcyan;
+    padding: 30px;
+    border-radius: 10px;
+    flex-basis: 700px;
+    max-width: 700px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 15px 0 15px;
+}
+.quiz-over-modal .content p{
+    color: white;
+}
+
+.quiz-over-modal .content p span{
+    color: white;
+}
+
+.quiz-over-modal .content h1 {
+    font-size: 36px;
+    margin: 0 0 35px;
+    color: white;
+}
+
+.quiz-over-modal .content button, .quiz-over-modal .content a  {
+    margin: 20px 0 0 0;
+    padding: 15px 15px;
+    border: none;
+    background-color: black;
+    transition: all .3s ease-in-out;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ffffff;
+    @media (max-width: 405px) {
+        font-size: 14px;
+        font-weight: 700;
+    }
+}
+
+.quiz-over-modal .content button:hover{
+    background-color: rgba(0, 0, 0, 0.726);
+}
+
+
+.hidden{
+    display: none;
+}

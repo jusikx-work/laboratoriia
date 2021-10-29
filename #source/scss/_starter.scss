@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    color: black;
+}
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration:none;}
+ul,li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight:400;}
+a{color: inherit;}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap');
+*{font-family: 'Sen', sans-serif;}
+
+
+
+
+
+
+@mixin container($max-width, $top, $right, $bottom, $left, $orientation, $among-container, $among-items, $min-top, $min-right, $min-bottom, $min-left){
+    max-width: calc(#{$max-width} * 1px);
+    display: flex;
+    flex-direction: $orientation;
+    align-items: $among-container;
+    justify-content: $among-items;
+    margin: 0 auto;
+    padding-top: calc( ( #{$min-top} * 1px) + (#{$top} - #{$min-top}) * ((100vw - 320px) / (#{$max-width} - 320)));
+    padding-right: calc( ( #{$min-right} * 1px) + (#{$right} - #{$min-right}) * ((100vw - 320px) / (#{$max-width} - 320)));
+    padding-bottom: calc( ( #{$min-bottom} * 1px) + (#{$bottom} - #{$min-bottom}) * ((100vw - 320px) / (#{$max-width} - 320)));
+    padding-left: calc( ( #{$min-left} * 1px) + (#{$left} - #{$min-left}) * ((100vw - 320px) / (#{$max-width} - 320)));
+}
+.EXAMPLE {
+    &_container {
+        @include container(1400, 0, 0, 0, 0, column, center, flex-start, 0, 0, 0, 0);
+    }
+}
+
+
+
+
+@mixin text ($max, $min, $max-width) {
+    @media (max-width: ($max-width * 1px)) {
+        font-size: calc( ( #{$min} * 1px) + (#{$max} - #{$min}) * ((100vw - 320px) / (#{$max-width} - 320)));
+    }
+    @media (min-width: ($max-width * 1px + 1px)){
+        font-size: $max * 1px;
+    }
+}
+    
+.EXAMPLE{
+    @include text(20, 17, 1400);
+}
+
+
+
+
+@mixin padding($top, $right, $bottom, $left, $min-top, $min-right, $min-bottom, $min-left, $max-width){
+    @media (max-width: ($max-width * 1px)) {
+        padding-top: calc( ( #{$min-top} * 1px) + (#{$top} - #{$min-top}) * ((100vw - 320px) / (#{$max-width} - 320)));
+        padding-right: calc( ( #{$min-right} * 1px) + (#{$right} - #{$min-right}) * ((100vw - 320px) / (#{$max-width} - 320)));
+        padding-bottom: calc( ( #{$min-bottom} * 1px) + (#{$bottom} - #{$min-bottom}) * ((100vw - 320px) / (#{$max-width} - 320)));
+        padding-left: calc( ( #{$min-left} * 1px) + (#{$left} - #{$min-left}) * ((100vw - 320px) / (#{$max-width} - 320)));
+    }
+    @media (min-width: ($max-width * 1px + 1px)){
+        padding-top: calc(#{$top} * 1px);
+        padding-right: calc(#{$right} * 1px);
+        padding-bottom: calc(#{$bottom} * 1px);
+        padding-left: calc(#{$left} * 1px);
+    }
+}
+    
+.EXAMPLE{
+    @include padding(40, 40, 40, 40, 20, 20, 20, 20, 1400);
+}
+
+
+
+
+@mixin margin($top, $right, $bottom, $left, $min-top, $min-right, $min-bottom, $min-left, $max-width){
+    @media (max-width: ($max-width * 1px)) {
+        margin-top: calc( ( #{$min-top} * 1px) + (#{$top} - #{$min-top}) * ((100vw - 320px) / (#{$max-width} - 320)));
+        margin-right: calc( ( #{$min-right} * 1px) + (#{$right} - #{$min-right}) * ((100vw - 320px) / (#{$max-width} - 320)));
+        margin-bottom: calc( ( #{$min-bottom} * 1px) + (#{$bottom} - #{$min-bottom}) * ((100vw - 320px) / (#{$max-width} - 320)));
+        margin-left: calc( ( #{$min-left} * 1px) + (#{$left} - #{$min-left}) * ((100vw - 320px) / (#{$max-width} - 320)));
+    }
+    @media (min-width: ($max-width * 1px + 1px)){
+        margin-top: calc(#{$top} * 1px);
+        margin-right: calc(#{$right} * 1px);
+        margin-bottom: calc(#{$bottom} * 1px);
+        margin-left: calc(#{$left} * 1px);
+    }
+}
+.EXAMPLE{
+    @include margin(40, 40, 40, 40, 20, 20, 20, 20, 1400);
+}
+
+
+
+
+@mixin line-height ($max, $min, $max-width) {
+    @media (max-width: ($max-width * 1px)) {
+        line-height: calc( ( #{$min} * 1px) + (#{$max} - #{$min}) * ((100vw - 320px) / (#{$max-width} - 320)));
+    }
+    @media (min-width: ($max-width * 1px + 1px)){
+        line-height: $max * 1px;
+    }
+}
+.EXAMPLE{
+    @include line-height(20, 17, 1400);
+}
+
+
+
+
+
+@mixin margin-768($top, $right, $bottom, $left, $min-top, $min-right, $min-bottom, $min-left, $max-width){
+    @media (max-width: ($max-width * 1px)) {
+        margin-top: calc( ( #{$min-top} * 1px) + (#{$top} - #{$min-top}) * ((100vw - 768px) / (#{$max-width} - 768)));
+        margin-right: calc( ( #{$min-right} * 1px) + (#{$right} - #{$min-right}) * ((100vw - 768px) / (#{$max-width} - 768)));
+        margin-bottom: calc( ( #{$min-bottom} * 1px) + (#{$bottom} - #{$min-bottom}) * ((100vw - 768px) / (#{$max-width} - 768)));
+        margin-left: calc( ( #{$min-left} * 1px) + (#{$left} - #{$min-left}) * ((100vw - 768px) / (#{$max-width} - 768)));
+    }
+    @media (min-width: 1441px){
+        margin-top: calc(#{$top} * 1px);
+        margin-right: calc(#{$right} * 1px);
+        margin-bottom: calc(#{$bottom} * 1px);
+        margin-left: calc(#{$left} * 1px);
+    }
+    @media (max-width:767px) {
+        margin-top: calc(#{$min-top} * 1px);
+        margin-right: calc(#{$min-right} * 1px);
+        margin-bottom: calc(#{$min-bottom} * 1px);
+        margin-left: calc(#{$min-left} * 1px);
+    }
+}

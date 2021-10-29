@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1031" height="417" viewBox="0 0 1031 417">
+  <defs>
+    <clipPath id="clip-logo_1">
+      <rect width="1031" height="417"/>
+    </clipPath>
+  </defs>
+  <g id="logo_1" data-name="logo 1" clip-path="url(#clip-logo_1)">
+    <path id="Path_6" data-name="Path 6" d="M212.05,389.463c-99.122,0-125.8-5.021-148.9-28.116-23.238-23.238-28.115-49.776-28.115-148.9s5.02-125.659,28.115-148.9c23.1-23.095,49.776-28.115,148.9-28.115s125.8,5.02,148.9,28.115c23.238,23.239,28.115,49.776,28.115,148.9s-4.877,125.659-28.115,148.9C337.852,384.442,311.171,389.463,212.05,389.463Z" transform="translate(606.953)" fill="#090007"/>
+    <path id="Path_3" data-name="Path 3" d="M212.05,389.463c-99.122,0-125.8-5.021-148.9-28.116-23.238-23.238-28.115-49.776-28.115-148.9s5.02-125.659,28.115-148.9c23.1-23.095,49.776-28.115,148.9-28.115s125.8,5.02,148.9,28.115c23.238,23.239,28.115,49.776,28.115,148.9s-4.877,125.659-28.115,148.9C337.852,384.442,311.171,389.463,212.05,389.463Z" fill="#090007"/>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="606.953" height="354.03" transform="translate(212.05 35.44)"/>
+    <text id="Лабораторія" transform="translate(100 251)" fill="#fff" font-size="125" font-family="Montserrat-SemiBold, Montserrat" font-weight="600" letter-spacing="0em"><tspan x="0" y="0">Лабораторія</tspan></text>
+  </g>
+</svg>

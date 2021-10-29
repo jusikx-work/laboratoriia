@@ -1,0 +1,92 @@
+.head {
+    @include margin(30, 0, 0, 0, 5, 0, 0, 0, 1400);
+    padding: 0 20px;
+    &__container {
+        margin: 0 auto;
+        max-width: 1380px;
+        @media (min-width: 768px) {
+            background-image: url(../images/Head.png);
+            background-size: cover;
+            min-height: 500px;
+        }
+        
+    }
+
+    &__content {
+        position: relative;
+        @media (min-width: 768px) {
+            margin-left: 40px;
+            background-color: white;
+            max-width: 400px;
+            padding: 25px; 
+        }
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column; 
+    }
+
+    &__title {
+        @include line-height(33, 30, 1400);
+        @include text(27, 25, 1400);
+        font-weight: 500;
+    }
+
+    &__text>p {
+        @include text(17, 15, 1400);
+        font-weight: 300;
+        line-height: 23px;
+        margin-top: 20px;
+    }
+
+    &__button {
+        align-self: flex-start;
+        
+    }
+
+    &__image{
+        @media (min-width: 768px) {
+            display: none;
+        }
+        &>img{
+            object-fit: cover;
+            max-width: 100%;
+        }
+    }
+}
+
+.search{
+    cursor: pointer;
+    line-height: 24px;
+    @include text(20, 14, 1400);
+    position: relative;
+    z-index: 2;
+    &:before{
+        content: '';
+        position: absolute;
+        left: -25px;
+        bottom: 2px;
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/search.svg);
+        background-size: cover;
+    }
+}
+
+.filter{
+    font-size: 20px;
+    margin-left: 10px
+}
+
+.try-block{
+    @include margin(90, 0, 0, 0, 30, 0, 0, 0, 1400);
+    display: flex;
+    align-items: center;
+}
+
+.try-block-1{
+    @include margin(20, 0, 0, 0, 30, 0, 0, 0, 1400);
+}
+
+.try-block-2{
+    margin-top: 25px;
+}

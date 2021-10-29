@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1031" height="417" viewBox="0 0 1031 417">
+  <defs>
+    <clipPath id="clip-logo_2">
+      <rect width="1031" height="417"/>
+    </clipPath>
+  </defs>
+  <g id="logo_2" data-name="logo 2" clip-path="url(#clip-logo_2)">
+    <text id="Лабораторія" transform="translate(100 251)" font-size="125" font-family="Montserrat-SemiBold, Montserrat" font-weight="600" letter-spacing="0em"><tspan x="0" y="0">Лабораторія</tspan></text>
+    <g id="Path_210" data-name="Path 210" transform="translate(35 35)" fill="none">
+      <path d="M100,0H861A100,100,0,0,1,961,100V254A100,100,0,0,1,861,354H100A100,100,0,0,1,0,254V100A100,100,0,0,1,100,0Z" stroke="none"/>
+      <path d="M 100 5.5 C 47.89251708984375 5.5 5.5 47.89248657226563 5.5 100 L 5.5 254 C 5.5 306.1074829101563 47.89251708984375 348.5 100 348.5 L 861 348.5 C 913.1074829101563 348.5 955.5 306.1074829101563 955.5 254 L 955.5 100 C 955.5 47.89248657226563 913.1074829101563 5.5 861 5.5 L 100 5.5 M 100 0 L 861 0 C 916.228515625 0 961 44.77151489257813 961 100 L 961 254 C 961 309.228515625 916.228515625 354 861 354 L 100 354 C 44.771484375 354 0 309.228515625 0 254 L 0 100 C 0 44.77151489257813 44.771484375 0 100 0 Z" stroke="none" fill="#000"/>
+    </g>
+  </g>
+</svg>

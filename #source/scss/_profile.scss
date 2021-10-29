@@ -1,0 +1,51 @@
+.wrapper{
+    height: 100%;
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    &-body{
+        background: #E7EEF3;
+    }
+    max-width: 1420px;
+    margin: 0 auto;
+    &__title {
+        @include text(56, 25, 992);
+        @include line-height(56, 30, 992);
+        text-align: center;
+        margin-top: 20px;
+    }
+    &__greeting{
+        margin-top: 40px;
+        @include text(35, 20, 992);
+        @include line-height(35, 20, 992);
+        &>span{
+            color: black;
+            @include text(40, 20, 992);
+            @include line-height(40, 20, 992);
+        }
+    }
+}
+.logout {
+
+    &__link {
+        margin-top: auto;
+        margin-bottom: auto;
+        background-color: black;
+        color: white;
+        border-radius: 40px;
+        cursor: pointer;
+        padding: 16px 40px;
+        line-height: 16px;
+        font-family: "e-Ukraine",sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        transition: all .5s;
+        &:hover{
+            color: black;
+            background: #E7EEF3;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+.try {
+    @media (max-width:1450px) {
+        margin-top: calc( ( 40 * 1px) + (120 - 40) * ((100vw - 320px) / (1450 - 320)));
+    }
+    @media (min-width:1451px) {
+        margin-top: 120px;
+    }
+    background-color: rgb(155, 232, 190);
+    &__container {
+        @include padding(200, 20, 200, 20, 70, 20, 70, 20, 1400);
+        margin: 0 auto;
+        max-width: 1020px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__title {
+        @include text(60, 35, 1400);
+        font-weight: 300;
+        letter-spacing: -2px;
+    }
+
+    &__text {
+        margin-top: 30px;
+        font-weight: 300;
+        @include text(21, 14, 1400);
+        line-height: 30px;
+    }
+
+    &__button-2 {
+        display: block;
+        font-size: 18px;
+        font-family: "e-Ukraine",sans-serif;
+        font-weight: 400;
+        line-height: 16px;
+        padding: 16px 20px;
+        cursor: pointer;
+        background-color: #000;  
+        border-radius: 40px;
+        color: white;
+        transition: all .45s;
+        border: 1.5px solid transparent;
+        &:hover{
+            border: 1.5px solid black;
+            background-color: transparent;
+            color: black;
+        }
+    }
+    &__button-1{
+        height: 60px;
+        overflow: hidden;
+        margin-right: 5px;
+        &>img{
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__buttons{
+        margin-top: 50px;
+        @media (max-width: 767px) {
+            margin-top: 30px;
+        }
+        display: flex;
+        align-items: center;
+    }
+}
